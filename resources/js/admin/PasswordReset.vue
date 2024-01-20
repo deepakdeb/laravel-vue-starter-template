@@ -11,7 +11,7 @@
                 <v-img src='images/logo.png' max-width="150"></v-img>
                 </router-link>
 
-                <p class="pa-1 font-bold">BuildMax Shop Admin Panel</p>
+                <p class="pa-1 font-bold">Reset Password</p>
                 </div>
                
                 </v-container>
@@ -77,7 +77,7 @@
             	this.showSuccess('Password reset done');   
               
               setTimeout(() => {
-                this.$router.push('/admin/login');
+                this.$router.push('/login');
               }, 2000)
           }).catch(error => {
             // Error sending password reset link

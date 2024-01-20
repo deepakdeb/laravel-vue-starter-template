@@ -1,5 +1,5 @@
 <template>
-  <v-app class="buildmax-shop-front" :class="showHover"> 
+  <v-app class="front-wrapper" :class="showHover"> 
 
   <v-main >      
     <v-container no-gutters  class="fill-height body-content fill-height p-0" fluid>

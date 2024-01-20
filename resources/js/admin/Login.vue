@@ -38,7 +38,7 @@
 </template>
 
 <script setup>
-document.title = "Admin Login";
+document.title = "Login";
 </script>
 
 <script>

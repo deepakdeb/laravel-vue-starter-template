@@ -22,7 +22,7 @@
 </template>
 
 <script setup>
-document.title = 'Admin Registration';
+document.title = 'Registration';
 </script>
 
 

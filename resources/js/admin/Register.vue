@@ -11,7 +11,7 @@
                 <v-img src='/images/logo.png' max-width="150"></v-img>
                 </router-link>
 
-                <p class="pa-1 font-bold">BuildMax Shop Admin Panel</p>
+                <p class="pa-1 font-bold">Register</p>
                 </div>
                
                 </v-container>
@@ -38,7 +38,7 @@
 </template>
 
 <script setup>
-document.title = 'Admin Registration';
+document.title = "Registration";
 </script>
 
 
@@ -71,7 +71,7 @@ document.title = 'Admin Registration';
                     .then(({data}) => {
                         // Auth.login(data.access_token,data.user); //set local storage
                         // this.$router.push('/admin');
-                        this.$router.push('/admin/login');
+                        this.$router.push('/login');
                       
                     })
                     .catch((error) => {

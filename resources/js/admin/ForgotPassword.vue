@@ -1,18 +1,8 @@
 <template>
-  <!-- <v-form @submit.prevent="sendPasswordResetEmail">
-    <v-text-field
-      v-model="email"
-      label="Email"
-      required
-    ></v-text-field>
-    <v-btn type="submit" color="primary">Send Password Reset Link</v-btn>
-  </v-form> -->
   <v-overlay v-model="overlay"></v-overlay>
   <v-container class='fluid fill-height'>
         <v-layout  class='align-center justify-center pt-5 pb-8'>
           <v-flex  class='xs12 sm8 md4'>
-
-        
               <v-card class="elevation-12 auth_card" >
                 <v-container>
                 <div align="center">
@@ -20,7 +10,7 @@
                 <v-img src='images/logo.png' max-width="150"></v-img>
                 </router-link>
 
-                <p class="pa-1 font-bold">BuildMax Shop Admin Panel</p>
+                <p class="pa-1 font-bold">Forgot Password</p>
                 </div>
                
                 </v-container>
@@ -54,24 +44,17 @@
         overlay: false,
       }
     },
-    // watch: {
-    //   overlay (val) {
-    //     val && setTimeout(() => {
-    //       this.overlay = false
-    //     }, 500)
-    //   },
-    // },
     methods: {
       sendPasswordResetEmail() {
         this.overlay = true
-        axios.post('/api/password/email', {
+        this.axios.post('/api/password/email', {
           email: this.email,
         }).then(response => {
           this.showSuccess('A Password reset link has been sent to your email.');
           this.overlay = false
 
           setTimeout(() => {
-            this.$router.push('/admin/login');
+            this.$router.push('/login');
           }, 2000)
           
           

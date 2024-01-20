@@ -9,13 +9,9 @@
     <link rel="icon" href="fav.png" sizes="32x32" />
     <link rel="icon" href="fav.png" sizes="192x192" />
     <link rel="apple-touch-icon" href="fav.png" />
-    <meta name="msapplication-TileImage" content="fav.png" />
-   
-    <meta name="title" content="BuildMax">
-    <meta name="keywords" content="Building, Materials, Caribbean">
-    <meta name="description" content="One-Stop Supplier of Building Materials to Caribbean">
 
-    <title>BuildMAX | One-Stop Supplier of Building Materials to Caribbean</title>
+
+    <title>Laravel Starter Template</title>
     
 
     <!-- Scripts -->
