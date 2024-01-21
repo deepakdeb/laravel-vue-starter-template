@@ -3,12 +3,10 @@
 		:show-one-child="true">
 		<template v-slot:header>
 			<v-container class="align-self-center side-header" color="white" contain>
-				<router-link to="/admin" tag="span" style="cursor: pointer">
-					<v-img src='/images/logo.png' max-width="150"></v-img>
+				<router-link to="/admin" tag="span" >
+					<v-img src='/images/logo.png' max-width="40" class="mx-auto"></v-img>
 				</router-link>
-
 			</v-container>
-
 		</template>
 	</sidebar-menu>
 

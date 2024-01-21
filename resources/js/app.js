@@ -10,6 +10,8 @@ import '@fortawesome/fontawesome-free/css/all.css'
 import VueSweetalert2 from 'vue-sweetalert2';
 import 'sweetalert2/dist/sweetalert2.min.css';
 
+import $swal from 'sweetalert2';
+
 // Vuetify
 import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
@@ -22,7 +24,7 @@ const vuetify = createVuetify({
 		themes: {
 			light: {
 				colors: {
-					primary: '#EC6640',
+					primary: '#8c57ff',
 					secondary: '#001659',
 					accent: '#8c9eff',
 					error: '#b71c1c',
@@ -57,7 +59,7 @@ app.use(store).use(router);
 app.use(VueSidebarMenu);
 
 
-window.Swal = app.config.globalProperties.$swal;
+window.$swal = app.config.globalProperties.$swal;
 
 app.config.globalProperties.$toolbarOptions = toolbarOptions;
 
@@ -78,7 +80,7 @@ if (axios.interceptors) {
 				router.push('/login');
 			}
 			else if (error.response.status == 422) {
-				Swal.fire({
+				$swal.fire({
 					position: 'bottom-end',
 					icon: 'warning',
 					title: (Object.values(error.response.data.errors)),
@@ -87,7 +89,7 @@ if (axios.interceptors) {
 				})
 			}
 			else if (error.response.status == 500) {
-				Swal.fire({
+				$swal.fire({
 					position: 'bottom-end',
 					icon: 'error',
 					title: 'Server error.',
@@ -117,7 +119,7 @@ window.Rules = {
 app.mixin({
 	methods: {
 		showSuccess(title) {
-			Swal.fire({
+			$swal.fire({
 				position: 'top-end',
 				icon: 'success',
 				title: title,
@@ -129,9 +131,9 @@ app.mixin({
 			if (!error.response) return;
 			if (!error.response.status) return;
 			if (error.response.status == 500) {
-				//Swal.fire('Server error.', '', 'danger')
+				//$swal.fire('Server error.', '', 'danger')
 
-				Swal.fire({
+				$swal.fire({
 					position: 'top-end',
 					icon: 'warning',
 					title: 'Server error.',

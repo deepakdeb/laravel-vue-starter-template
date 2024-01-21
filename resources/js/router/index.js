@@ -79,7 +79,7 @@ router.beforeEach((to, from, next) => {
             next();
             return;
         } else {
-            router.push('admin/login');
+            router.push('login');
         }
     } else {
         next();
